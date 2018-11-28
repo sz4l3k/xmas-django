@@ -7,7 +7,7 @@ from pathlib import Path
 
 home = str(Path.home())
 
-with open(home + '/results.txt', 'rb') as f:
+with open(home + '/kacik.txt', 'rb') as f:
     results = pickle.load(f)
 
 def index(request):
