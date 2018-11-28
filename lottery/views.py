@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 import pickle
-
 import os
-print(os.getcwd())
+from pathlib import Path
 
-with open('results.txt', 'rb') as f:
+home = str(Path.home())
+
+with open(home + '/results.txt', 'rb') as f:
     results = pickle.load(f)
 
 def index(request):
