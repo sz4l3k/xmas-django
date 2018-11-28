@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import pickle
 
-with open('/home/pi/xmas/lottery/results.txt', 'rb') as f:
+import os
+print(os.getcwd())
+
+with open('results.txt', 'rb') as f:
     results = pickle.load(f)
 
 def index(request):
@@ -11,7 +14,13 @@ def index(request):
 def onlogin(request):
     if request.method == 'POST':
         key = request.POST.get('secret_key', None)
-        return render(request, 'response.html', {'name' : results[key]})
+        name = results.get(key)
+        if name == None:
+            return render(request, 'error.html', {})
+        else:
+            return render(request, 'response.html', {'name' : name})
     else:
         return render(request, 'index.html')
 # Create your views here.
+
+
