@@ -22,5 +22,5 @@ def onlogin(request):
         else:
             return render(request, 'diamenty/response.html', {'name' : name})
     else:
-        return render(request, 'index.html')
+        return render(request, 'diamenty/index.html')
 # Create your views here.

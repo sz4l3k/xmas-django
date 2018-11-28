@@ -22,7 +22,7 @@ def onlogin(request):
         else:
             return render(request, 'lottery/response.html', {'name' : name})
     else:
-        return render(request, 'index.html')
+        return render(request, 'lottery/index.html')
 # Create your views here.
 
 
