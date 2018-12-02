@@ -2,11 +2,17 @@ html {
     text-align: center;
 }
 
-body {
-    padding: 20% 0;
-}
-
 img {
 	width: 20%;
 	height: auto;
+}
+
+p {
+    font-size: 40px;
+}
+
+.gift { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -2,15 +2,20 @@
     <head>
         {% load static %}
         <link rel="stylesheet" href="{% static 'lottery/index_styles.css' %}">
-    </head>
-    <form method="POST" action="/lottery/onlogin" class="form">
-        {% csrf_token %}
-        <img src="https://reszkowce.sosedukator.pl/wp-content/uploads/sites/34/2018/02/700_FO17939342_2f30f0d8317323acdc113330e7bc45e6.jpg" alt="Christmas Tree" width="15%" height="40%" class="tree">
-        <p></p>
-        <input type="text" name="secret_key" align="middle">
-        <p></p>
-        <button type="submit" class="button">Verify 1</button>
-    </form>
+	</head>
+	<body>
+		<form method="POST" action="/lottery/onlogin" class="form">
+			{% csrf_token %}
+			<img src="https://reszkowce.sosedukator.pl/wp-content/uploads/sites/34/2018/02/700_FO17939342_2f30f0d8317323acdc113330e7bc45e6.jpg" alt="Christmas Tree" width="15%" height="40%" class="tree">
+			<p></p>
+
+			<p>Wesołych świąt!</p>
+			<p>Witaj na tegorocznym losowaniu wigilijnym. Wprowadź swoje tajne hasło by dowiedzieć się kogo wylosowałeś.</p>
+			<input type="text" name="secret_key" align="middle">
+			<p></p>
+			<button type="submit" class="button">Sprawdź</button>
+		</form>
+	</body>
 </html>
 
 <script>
